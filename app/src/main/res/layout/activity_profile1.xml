@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/profile1_icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/prof1_icon"
+        app:layout_constraintBottom_toTopOf="@id/profile1_title_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/profile1_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/profile1_title_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/profile1_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="149dp"
+        android:text="닉네임을 설정해보세요!"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profile1_info_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/prof1_info"
+        app:layout_constraintBottom_toBottomOf="@id/profile1_subtitle_tv"
+        app:layout_constraintEnd_toStartOf="@id/profile1_subtitle_tv"
+        app:layout_constraintTop_toTopOf="@id/profile1_subtitle_tv" />
+
+    <TextView
+        android:id="@+id/profile1_subtitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="닉네임은 영문, 숫자, 마침표, 밑줄만 사용 가능합니다."
+        android:textColor="#C4C4C4"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/profile1_title_tv"
+        app:layout_constraintStart_toStartOf="@id/profile1_title_tv"
+        app:layout_constraintTop_toBottomOf="@id/profile1_title_tv"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/profile1_nickname_et"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/text_edit_round"
+        android:gravity="top"
+        android:hint="닉네임"
+        android:textColorHint="#C4C4C4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile1_subtitle_tv"
+        />
+
+    <TextView
+        android:id="@+id/profile1_nickname_error_1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="사용자 이름은 영문, 숫자, 마침표, 밑줄만 사용할 수 있습니다."
+        android:textColor="#FF5E5E"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile1_nickname_et" />
+
+    <TextView
+        android:id="@+id/profile1_nickname_error_2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="사용자 이름은 20자 이내로 작성해주세요."
+        android:textColor="#FF5E5E"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile1_nickname_et" />
+
+    <TextView
+        android:id="@+id/profile1_nickname_error_3_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="이 닉네임은 이미 사용 중입니다."
+        android:textColor="#FF5E5E"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile1_nickname_et" />
+
+
+    <Button
+        android:id="@+id/profile1_button_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_round"
+        android:text="다음"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

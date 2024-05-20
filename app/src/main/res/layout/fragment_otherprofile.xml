@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/otherprofile_profile_iv"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:src="@drawable/albumcover_5"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/otherprofile_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Min_SEO!"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/pretendard"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="@id/otherprofile_profile_iv"
+        app:layout_constraintEnd_toEndOf="@id/otherprofile_profile_iv"
+        app:layout_constraintTop_toBottomOf="@id/otherprofile_profile_iv"/>
+
+    <TextView
+        android:id="@+id/otherprofile_comment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="잡다한 음악 다 좋아해요♥"
+        android:textSize="13sp"
+        android:textColor="#848484"
+        android:textStyle="bold"
+        android:fontFamily="@font/pretendard"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="@id/otherprofile_profile_iv"
+        app:layout_constraintEnd_toEndOf="@id/otherprofile_profile_iv"
+        app:layout_constraintTop_toBottomOf="@id/otherprofile_name_tv"/>
+
+    <LinearLayout
+        android:id="@+id/otherprofile_tape_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginEnd="54dp"
+        app:layout_constraintTop_toTopOf="@id/otherprofile_follower_ll"
+        app:layout_constraintBottom_toBottomOf="@id/otherprofile_follower_ll"
+        app:layout_constraintEnd_toStartOf="@id/otherprofile_follower_ll">
+
+        <TextView
+            android:id="@+id/otherprofile_tape_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/pretendard" />
+
+        <TextView
+            android:id="@+id/otherprofile_tape_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="테이프"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/pretendard" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otherprofile_follower_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="23dp"
+        app:layout_constraintStart_toStartOf="@id/otherprofile_profile_iv"
+        app:layout_constraintEnd_toEndOf="@id/otherprofile_profile_iv"
+        app:layout_constraintTop_toBottomOf="@id/otherprofile_comment_tv">
+
+        <TextView
+            android:id="@+id/otherprofile_follower_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="567"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/pretendard" />
+
+        <TextView
+            android:id="@+id/otherprofile_follower_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="팔로워"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/pretendard" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otherprofile_following_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="54dp"
+        app:layout_constraintTop_toTopOf="@id/otherprofile_follower_ll"
+        app:layout_constraintBottom_toBottomOf="@id/otherprofile_follower_ll"
+        app:layout_constraintStart_toEndOf="@id/otherprofile_follower_ll">
+
+        <TextView
+            android:id="@+id/otherprofile_following_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="130"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/pretendard" />
+
+        <TextView
+            android:id="@+id/otherprofile_following_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="팔로잉"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/pretendard" />
+    </LinearLayout>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/otherprofile_tape_num_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="7"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily="@font/pretendard"-->
+<!--        android:layout_marginEnd="54dp"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/otherprofile_follower_num_tv"-->
+<!--        app:layout_constraintTop_toTopOf="@id/otherprofile_follower_num_tv"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/otherprofile_follower_num_tv"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/otherprofile_follower_num_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="567"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily="@font/pretendard"-->
+<!--        android:layout_marginTop="23dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/otherprofile_profile_iv"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/otherprofile_profile_iv"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/otherprofile_comment_tv"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/otherprofile_following_num_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="130"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily="@font/pretendard"-->
+<!--        android:layout_marginStart="54dp"-->
+<!--        app:layout_constraintStart_toEndOf="@id/otherprofile_follower_num_tv"-->
+<!--        app:layout_constraintTop_toTopOf="@id/otherprofile_follower_num_tv"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/otherprofile_follower_num_tv"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/otherprofile_tape_text_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="테이프"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily="@font/pretendard"-->
+<!--        android:layout_marginTop="9dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/otherprofile_tape_num_tv"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/otherprofile_tape_num_tv"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/otherprofile_tape_num_tv"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/otherprofile_follower_text_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="팔로워"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily="@font/pretendard"-->
+<!--        android:layout_marginTop="9dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/otherprofile_follower_num_tv"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/otherprofile_follower_num_tv"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/otherprofile_follower_num_tv"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/otherprofile_following_text_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="팔로잉"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily="@font/pretendard"-->
+<!--        android:layout_marginTop="9dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/otherprofile_following_num_tv"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/otherprofile_following_num_tv"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/otherprofile_following_num_tv"/>-->
+
+<!--    <ToggleButton-->
+<!--        android:id="@+id/otherprofile_follow_toggle_btn"-->
+<!--        android:layout_width="169dp"-->
+<!--        android:layout_height="33dp"-->
+<!--        android:background="@drawable/follow_unclicked_btn"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textOff="팔로우"-->
+<!--        android:textOn="팔로잉"-->
+<!--        android:layout_marginTop="17dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/otherprofile_profile_iv"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/oherprofile_profile_share_btn"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/otherprofile_follower_ll"/>-->
+
+    <Button
+        android:id="@+id/otherprofile_follow_btn"
+        android:layout_width="169dp"
+        android:layout_height="33dp"
+        android:text="팔로우"
+        android:textColor="@color/white"
+        android:background="@drawable/follow_unclicked_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="@id/otherprofile_profile_iv"
+        app:layout_constraintEnd_toStartOf="@id/oherprofile_profile_share_btn"
+        app:layout_constraintTop_toBottomOf="@id/otherprofile_follower_ll"/>
+
+    <Button
+        android:id="@+id/oherprofile_profile_share_btn"
+        android:layout_width="169dp"
+        android:layout_height="33dp"
+        android:text="프로필 공유"
+        android:textColor="#4A4A4A"
+        android:background="@drawable/follow_clicked_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginStart="9dp"
+        app:layout_constraintStart_toEndOf="@id/otherprofile_follow_btn"
+        app:layout_constraintEnd_toEndOf="@id/otherprofile_profile_iv"
+        app:layout_constraintTop_toTopOf="@id/otherprofile_follow_btn"
+        app:layout_constraintBottom_toBottomOf="@id/otherprofile_follow_btn"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/otherprofile_content_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="@color/black"
+        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorFullWidth="false"
+        app:tabRippleColor="#00ff0000"
+        app:layout_constraintStart_toStartOf="@id/otherprofile_profile_iv"
+        app:layout_constraintEnd_toEndOf="@id/otherprofile_profile_iv"
+        app:layout_constraintTop_toBottomOf="@id/otherprofile_follow_btn"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/otherprofile_content_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/otherprofile_content_tb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

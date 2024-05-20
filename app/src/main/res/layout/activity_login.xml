@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/login_star_1"
+        android:src="@drawable/login_star_1"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="411dp" />
+
+    <ImageView
+        android:id="@+id/login_star_2"
+        android:src="@drawable/login_star_2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="212dp" />
+
+    <ImageView
+        android:id="@+id/login_star_3"
+        android:src="@drawable/login_star_3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="54dp"
+        android:layout_marginTop="172dp" />
+
+    <ImageView
+        android:id="@+id/login_star_4"
+        android:src="@drawable/login_star_4"
+        android:layout_width="60.65dp"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="38.35dp"
+        android:layout_marginTop="373dp" />
+
+    <TextView
+        android:id="@+id/login_tape_text"
+        android:text="친구들과 음악취향을 나누고 싶다면?"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="263dp"/>
+
+    <ImageView
+        android:id="@+id/login_tape"
+        android:src="@drawable/login_tape"
+        android:layout_width="162dp"
+        android:layout_height="61.65dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="295dp" />
+
+    <View
+        android:id="@+id/login_black_background_1"
+        android:layout_width="197dp"
+        android:layout_height="35dp"
+        android:background="@drawable/layout_background_shape_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="596dp"/>
+
+    <LinearLayout
+        android:id="@+id/login_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/login_black_background_1"
+        app:layout_constraintEnd_toEndOf="@id/login_black_background_1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="605dp"
+        tools:ignore="Orientation">
+
+        <ImageView
+            android:id="@+id/login_black_image_iv"
+            android:src="@drawable/login_lightning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/login_black_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="카카오로 빠르게 회원가입"
+            android:layout_marginStart="7dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/login_black_background_2"
+        android:src="@drawable/polygon_2"
+        android:layout_width="18dp"
+        android:layout_height="26dp"
+        app:layout_constraintStart_toStartOf="@+id/login_black_background_1"
+        app:layout_constraintTop_toTopOf="@+id/login_black_background_1"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="22dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_black_background_1"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:id="@+id/login_sign_in_background"
+            android:layout_width="328dp"
+            android:layout_height="52dp"
+            android:background="@drawable/layout_background_shape_5"
+            android:backgroundTint="#FEE500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <LinearLayout
+            android:id="@+id/login_sign_in_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/login_sign_in_image_iv"
+                android:src="@drawable/login_kakaotalk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/login_sign_in_text_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="카카오로 로그인 / 회원가입하기"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

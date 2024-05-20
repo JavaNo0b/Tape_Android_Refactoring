@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/title_post_tape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tape 등록"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="56dp"/>
+    <ImageView
+        android:id="@+id/btn_post_tape_back"
+        android:layout_width="12dp"
+        android:layout_height="21dp"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title_post_tape"
+        android:layout_marginStart="16dp"/>
+    <ImageView
+        android:id="@+id/introduction_cover_img"
+        android:layout_width="138dp"
+        android:layout_height="138dp"
+        app:layout_constraintTop_toBottomOf="@id/title_post_tape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/album_4"/>
+    <TextView
+        android:id="@+id/introduction_title"
+        android:layout_width="171dp"
+        android:layout_height="22dp"
+        android:text=" 2023 연말 정산 노래 "
+        app:layout_constraintTop_toBottomOf="@id/introduction_cover_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16.5sp"/>
+    <TextView
+        android:id="@+id/introduction_desc"
+        android:layout_width="231dp"
+        android:layout_height="22dp"
+        android:text="내가 선정한 2023연말 가장 많이 들은 노래 "
+        app:layout_constraintTop_toBottomOf="@id/introduction_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="bold"
+        android:textSize="12.5sp"/>
+<TextView
+    android:id="@+id/head3_tv"
+    android:layout_width="62dp"
+    android:layout_height="16dp"
+    android:text="테이프 목록 "
+    android:textStyle="bold"
+    android:textSize="12.5sp"
+    app:layout_constraintTop_toBottomOf="@id/introduction_desc"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginStart="26dp"
+    android:layout_marginTop="36dp"
+    android:textColor="@color/black"/>
+    <ImageView
+        android:id="@+id/btn_post_continue"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_continue_inactive"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/songs_recycler_view"
+        android:layout_width="368dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/head3_tv"
+        app:layout_constraintBottom_toTopOf="@id/btn_post_continue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="26dp"
+        />
+
+    <TextView
+        android:id="@+id/included_song_count_tv"
+        android:layout_width="52dp"
+        android:layout_height="18dp"
+        app:layout_constraintTop_toTopOf="@id/btn_post_continue"
+        app:layout_constraintBottom_toBottomOf="@id/btn_post_continue"
+        app:layout_constraintStart_toStartOf="@id/btn_post_continue"
+        app:layout_constraintEnd_toEndOf="@id/btn_post_continue"
+        android:text="계속하기"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="11.5sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

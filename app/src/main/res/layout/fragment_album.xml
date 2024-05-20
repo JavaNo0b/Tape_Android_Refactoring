@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:id="@+id/album_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/btn_left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/album_tape_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="테이프"
+        style="@style/TextHeader"
+        app:layout_constraintBottom_toBottomOf="@id/album_back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/album_back_btn" />
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/album_tape_tv"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/album_tape_title_tv"-->
+    <!--        android:gravity="center">-->
+
+    <!--        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator-->
+    <!--            android:id="@+id/dots_indicator"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="8dp"-->
+    <!--            app:dotsCornerRadius="40dp"-->
+    <!--            app:dotsSize="40dp"-->
+    <!--            app:dotsSpacing="10dp"-->
+    <!--            app:dotsWidthFactor="2.5"-->
+    <!--            app:dotsColor="#F4F6F8"-->
+    <!--            app:selectedDotColor="@color/like_selected"-->
+    <!--            app:progressMode="false"-->
+    <!--            />-->
+    <!--    </LinearLayout>-->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/album_tape_tab"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/album_tape_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/album_tape_title_tv"
+        app:tabBackground="@drawable/indicator_layout"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabMinWidth="0dp"
+        app:tabMode="scrollable"/>
+
+    <TextView
+        android:id="@+id/album_tape_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tape Title"
+        style="@style/TextHeader"
+        app:layout_constraintTop_toBottomOf="@id/album_tape_tv"
+        app:layout_constraintStart_toStartOf="@id/album_tape_tv"
+        app:layout_constraintEnd_toEndOf="@id/album_tape_tv"
+        android:layout_marginTop="55dp"/>
+    <ImageView
+        android:id="@+id/album_tape_more_btn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/group_390"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/album_back_btn"
+        app:layout_constraintBottom_toBottomOf="@id/album_back_btn"
+        android:layout_marginEnd="6dp"
+        app:tint="@color/black" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/album_includedsongs_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        app:layout_constraintTop_toBottomOf="@id/album_tape_tv"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/album_youtube_btn"
+        android:layout_width="249dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_rounded_red"
+        app:layout_constraintStart_toStartOf="@id/album_includedsongs_vp"
+        app:layout_constraintEnd_toEndOf="@id/album_includedsongs_vp"
+        app:layout_constraintTop_toBottomOf="@id/album_includedsongs_vp"
+        android:layout_marginTop="25dp"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="23dp"
+            android:src="@drawable/btn_youtube"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Youtube와 연결해서 듣기"
+            style="@style/TextSmallSemiBold"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/album_btn_layout"
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@id/album_youtube_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/album_comment_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_comment"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_instagram"
+            android:layout_gravity="end"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/album_comment_profile_iv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/album_2"
+        app:layout_constraintStart_toStartOf="@id/album_youtube_btn"
+        app:layout_constraintTop_toBottomOf="@id/album_btn_layout"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/album_comment_profile_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="userName"
+        style="@style/TextSmallSemiBold"
+        app:layout_constraintStart_toEndOf="@id/album_comment_profile_iv"
+        app:layout_constraintTop_toTopOf="@id/album_comment_profile_iv"
+        android:layout_marginStart="11dp"/>
+
+    <TextView
+        android:id="@+id/album_comment_tv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="comment\ncomment\ncomment\ncomment"
+        style="@style/TextTiny"
+        android:background="@drawable/rounded_comment_box"
+        app:layout_constraintTop_toBottomOf="@id/album_comment_profile_tv"
+        app:layout_constraintStart_toStartOf="@id/album_comment_profile_tv"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

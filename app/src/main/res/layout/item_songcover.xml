@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/pageMargin"
+    android:layout_marginRight="@dimen/pageMargin"
+    android:clipToPadding="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/album_cover_cd"
+        android:layout_width="249dp"
+        android:layout_height="249dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardElevation="10dp"
+        android:background="@null">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/album_img_cd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/album_tape_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/item_songcover_coverimg_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/album_2"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/album_img_gradient_iv"
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:elevation="10dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/album_gradient"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="12.6dp"
+            android:layout_marginEnd="12.6dp"
+            android:elevation="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_songcover_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Title"
+                style="@style/TextHeader"
+                android:lineSpacingExtra="18sp"/>
+
+            <TextView
+                android:id="@+id/item_songcover_singer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/item_songcover_title_tv"
+                app:layout_constraintStart_toStartOf="@id/item_songcover_title_tv"
+                android:text="Singer"
+                style="@style/TextSmall"
+                android:lineSpacingExtra="18sp"/>
+
+            <ImageView
+                android:id="@+id/item_songcover_like_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_unlike"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@id/item_songcover_info_tv"
+                app:layout_constraintTop_toTopOf="@id/item_songcover_info_tv"
+                app:layout_constraintBottom_toBottomOf="@id/item_songcover_info_tv"/>
+            
+            <ImageView
+                android:id="@+id/item_songcover_info_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/item_songcover_singer_tv"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

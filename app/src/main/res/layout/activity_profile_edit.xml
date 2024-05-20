@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/profile_edit_cancel_btn_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="취소"
+        android:textSize="15sp"
+        android:textColor="#979797"
+        android:textStyle="bold"
+        android:fontFamily="@font/pretendard"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/profile_edit_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="프로필 편집"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/pretendard"
+        app:layout_constraintTop_toTopOf="@id/profile_edit_cancel_btn_tv"
+        app:layout_constraintBottom_toBottomOf="@id/profile_edit_cancel_btn_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_edit_user_img_cardview_cv"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardCornerRadius="75dp"
+        app:cardElevation="0dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/profile_edit_title_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_edit_user_img_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/prof2_layer"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/profile_edit_pic_add_btn_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_profile_edit_pic_add_icon"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/profile_edit_user_img_cardview_cv"
+        app:layout_constraintEnd_toEndOf="@id/profile_edit_user_img_cardview_cv"/>
+
+    <EditText
+        android:id="@+id/profile_user_name_edittext_et"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/text_edit_round"
+        android:text="User_Name"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/pretendard"
+        android:gravity="top"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_edit_user_img_cardview_cv"/>
+
+    <ImageView
+        android:id="@+id/profile_user_name_x_btn_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_profile_edit_x_icon"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintTop_toTopOf="@id/profile_user_name_edittext_et"
+        app:layout_constraintBottom_toBottomOf="@id/profile_user_name_edittext_et"
+        app:layout_constraintEnd_toEndOf="@id/profile_user_name_edittext_et"/>
+
+    <EditText
+        android:id="@+id/profile_user_comment_edittext_et"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/text_edit_round"
+        android:text="User_Comment"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/pretendard"
+        android:gravity="top"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_user_name_edittext_et"/>
+
+    <Button
+        android:id="@+id/profile_edit_complete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="수정 완료"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/button_round"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

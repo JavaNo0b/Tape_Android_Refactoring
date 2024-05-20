@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_marginTop="11dp">
+
+    <View
+        android:id="@+id/item_notif_background"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/layout_background_shape_4"
+        android:backgroundTint="#FFFFFF"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_notif_image_iv"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:src="@drawable/albumcover_5"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="12dp"
+        />
+    
+    <TextView
+        android:id="@+id/item_notif_text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="K_pop_lover 님이 회원님의 Tape를 좋아합니다."
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/item_notif_image_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="9.92dp"/>
+
+
+    <TextView
+        android:id="@+id/item_notif_text_more_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="11dp"
+        android:text="안녕하세요! 저도 이 노래 진짜 좋아했었는데 테이프에 올리셔서 반가..."
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/item_notif_image_iv"
+        app:layout_constraintTop_toBottomOf="@+id/item_notif_text_tv"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="9.92dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title_post_tape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tape 등록"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="56dp"/>
+    <ImageView
+        android:id="@+id/btn_post_tape_back"
+        android:layout_width="12dp"
+        android:layout_height="21dp"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title_post_tape"
+        android:layout_marginStart="16dp"/>
+    <TextView
+        android:id="@+id/pick_tv"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="21sp"
+        android:text="대표 이미지를\n선택해주세요!"
+        android:lineSpacingMultiplier="0.85"
+        android:layout_marginTop="126dp"/>
+    <ImageView
+        android:id="@+id/background_photo"
+        android:layout_width="138dp"
+        android:layout_height="138dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="217dp"
+        android:src="@drawable/square_bg"/>
+    <ImageView
+        android:id="@+id/ic_photo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_vector6"
+        app:layout_constraintStart_toStartOf="@id/background_photo"
+        app:layout_constraintEnd_toEndOf="@id/background_photo"
+        app:layout_constraintTop_toTopOf="@id/background_photo"
+        app:layout_constraintBottom_toBottomOf="@id/background_photo"/>
+        <ImageView
+        android:id="@+id/title_tape_iv"
+        android:layout_width="328dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/background_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/rect1_bg"/>
+    <EditText
+        android:id="@+id/title_tape_et"
+        android:layout_width="308dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/title_tape_iv"
+        app:layout_constraintEnd_toEndOf="@id/title_tape_iv"
+        app:layout_constraintTop_toTopOf="@id/title_tape_iv"
+        app:layout_constraintBottom_toBottomOf="@id/title_tape_iv"
+        android:background="@android:color/transparent"
+        android:hint="Tape 제목을 작성해 주세요 "
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:textSize="11.5sp"
+        android:textColor="@color/gray"/>
+    <ImageView
+        android:id="@+id/content_tape_iv"
+        android:layout_width="328dp"
+        android:layout_height="103dp"
+        app:layout_constraintTop_toBottomOf="@id/title_tape_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/rect2_bg"/>
+    <EditText
+        android:id="@+id/content_tape_et"
+        android:layout_width="308dp"
+        android:layout_height="103dp"
+        app:layout_constraintStart_toStartOf="@id/content_tape_iv"
+        app:layout_constraintEnd_toEndOf="@+id/content_tape_iv"
+        app:layout_constraintTop_toTopOf="@id/content_tape_iv"
+        app:layout_constraintBottom_toBottomOf="@id/content_tape_iv"
+        android:background="@android:color/transparent"
+        android:hint="Tape에 대한 소개글을 작성해 주세요 "
+        android:paddingStart="6dp"
+        android:paddingTop="12dp"
+        android:textSize="11.5sp"
+        android:textColor="@color/gray"
+        android:gravity="top"/>
+    <TextView
+        android:id="@+id/alert_tv"
+        android:layout_width="175dp"
+        android:layout_height="31dp"
+        app:layout_constraintStart_toStartOf="@id/content_tape_iv"
+        app:layout_constraintTop_toBottomOf="@id/content_tape_iv"
+        android:layout_marginTop="3dp"
+        android:text="제목 글자수는 1자 이상 60자 이내,\n소개글은 280자 이내로 작성가능합니다."
+        android:textColor="#FF5E5E"
+        android:textSize="9.5sp"
+        android:lineSpacingMultiplier="1"/>
+    <ImageView
+        android:id="@+id/btn_post_continue"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_continue_inactive"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/included_song_count_tv"
+        android:layout_width="52dp"
+        android:layout_height="18dp"
+        app:layout_constraintTop_toTopOf="@id/btn_post_continue"
+        app:layout_constraintBottom_toBottomOf="@id/btn_post_continue"
+        app:layout_constraintStart_toStartOf="@id/btn_post_continue"
+        app:layout_constraintEnd_toEndOf="@id/btn_post_continue"
+        android:text="계속하기"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="11.5sp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

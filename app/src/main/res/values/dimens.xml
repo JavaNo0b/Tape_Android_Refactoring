@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="design_bottom_navigation_height" tools:override="true">70dp</dimen>
+
+    <!--  item_view 간의 양 옆 여백을 상쇄할 값   -->
+    <dimen name="offsetBetweenPages">55dp</dimen>
+    <!--  각 페이지의 양 옆 margin  -->
+    <dimen name="pageMargin">50dp</dimen>
+
+    //프로필 갤러리
+    <dimen name="imgSize">150dp</dimen>
+
+
+</resources>

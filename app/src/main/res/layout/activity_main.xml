@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_fm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/main_bottom_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <LinearLayout
+        android:id="@+id/main_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bottom_rounded_layout"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_gravity="bottom"
+        android:elevation="10dp"
+        android:padding="5dp"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/main_bottom_tape_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:id="@+id/main_bottom_tape_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btm_tape_selector"
+                android:layout_weight="1"
+                android:background="@null"/>
+
+            <TextView
+                android:id="@+id/main_bottom_tape_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="테이프"
+                style="@style/TextTiny"
+                android:textSize="9sp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/navi_unselected"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_bottom_notif_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            app:rippleColor="@color/navi_selected"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:id="@+id/main_bottom_notif_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btm_notif_selector"
+                android:layout_weight="1"
+                android:background="@null"/>
+
+            <TextView
+                android:id="@+id/main_bottom_notif_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="알림"
+                style="@style/TextTiny"
+                android:textSize="9sp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/navi_unselected"/>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_bottom_post_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/main_bottom_search_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            app:rippleColor="@color/navi_selected"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:id="@+id/main_bottom_search_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btm_search_selector"
+                android:layout_weight="1"
+                android:background="@null"/>
+
+            <TextView
+                android:id="@+id/main_bottom_search_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="테이프"
+                style="@style/TextTiny"
+                android:textSize="9sp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/navi_unselected"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_bottom_profile_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            app:rippleColor="@color/navi_selected"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/main_bottom_prifile_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/album_2"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_bottom_post_tape_btn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/tape_black"
+        app:fabCustomSize="34dp"
+        android:backgroundTint="@color/navi_unselected"
+        app:borderWidth="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_bottom_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:elevation="11dp"
+        android:visibility="gone"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_bottom_post_post_btn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/post"
+        app:fabCustomSize="34dp"
+        app:fabSize="mini"
+        android:backgroundTint="@color/navi_unselected"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_bottom_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:elevation="11dp"
+        android:visibility="gone"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_bottom_post_btn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/post_btn"
+        app:rippleColor="@color/navi_selected"
+        app:fabCustomSize="34dp"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_bottom_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/navi_unselected"
+        app:elevation="11dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_searchuser_userimg_iv"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@drawable/albumcover_5"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/item_searchuser_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="music_play"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/pretendard"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/item_searchuser_userimg_iv"
+        app:layout_constraintTop_toTopOf="@id/item_searchuser_userimg_iv"
+        app:layout_constraintBottom_toBottomOf="@id/item_searchuser_userimg_iv"/>
+
+    <TextView
+        android:id="@+id/item_searchuser_comment_tv"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:text="잡다한 음악 다 좋아해요♥"
+        android:textSize="13sp"
+        android:textColor="#848484"
+        android:fontFamily="@font/pretendard"
+        app:layout_constraintTop_toTopOf="@id/item_searchuser_userimg_iv"
+        app:layout_constraintBottom_toBottomOf="@id/item_searchuser_userimg_iv"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
